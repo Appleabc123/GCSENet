@@ -32,11 +32,11 @@ class Model(nn.Module):
 
         X1 = t.relu(self.gcn_x1(x_g, input[1]['edge_index'], input[1]['data'][input[1]['edge_index'][0], input[1]['edge_index'][1]]))
         X = t.relu(self.gcn_x2(X1, input[1]['edge_index'], input[1]['data'][input[1]['edge_index'][0], input[1]['edge_index'][1]]))
-        X2 = t.relu(self.gcn_x2(X, input[1]['edge_index'].cuda(), input[1]['data'][input[1]['edge_index'][0], input[1]['edge_index'][1]].cuda()))
+        X2 = t.relu(self.gcn_x2(X, input[1]['edge_index'], input[1]['data'][input[1]['edge_index'][0], input[1]['edge_index'][1]]))
 
         Y1 = t.relu(self.gcn_y1(x_d, input[0]['edge_index'], input[0]['data'][input[0]['edge_index'][0], input[0]['edge_index'][1]]))
         Y = t.relu(self.gcn_y2(Y1, input[0]['edge_index'], input[0]['data'][input[0]['edge_index'][0], input[0]['edge_index'][1]]))
-        Y2 = t.relu(self.gcn_y2(Y, input[0]['edge_index'].cuda(), input[0]['data'][input[0]['edge_index'][0], input[0]['edge_index'][1]].cuda()))
+        Y2 = t.relu(self.gcn_y2(Y, input[0]['edge_index'], input[0]['data'][input[0]['edge_index'][0], input[0]['edge_index'][1]]))
 
         x1 = t.relu(self.linear_x_1(X2))
         x2 = t.relu(self.linear_x_2(x1))

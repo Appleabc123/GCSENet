@@ -20,7 +20,12 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Run CNN.")
     ## the input file
     ##disease-gene relationships and miRNA-gene relatiohships
-    parser.add_argument('--input_disease_miRNA', nargs='?', default='..\..\data\CNN_SENet\disease_miRNA.csv',
+
+    parser.add_argument('--input_disease_gene', nargs='?', default='..\..\data\process_feature\output_file\disease_gene.csv',
+                        help='Input disease_gene_relationship file')
+    parser.add_argument('--input_dmRNA_gene', nargs='?', default='..\..\data\process_feature\output_file\miRNA_gene.csv',
+                        help='Input miRNA_gene_relationship file')
+    parser.add_argument('--file', nargs='?', default='..\..\data\Test\\test.txt',
                         help='Input disease_gene_relationship file')
     parser.add_argument('--input_label',nargs = '?',default='..\..\data\CNN_SENet\label.csv',
                         help='sample label')
@@ -31,6 +36,8 @@ def parse_args():
     parser.add_argument('--display_step', nargs='?', default=10)
     parser.add_argument('--test_percentage', nargs='?', default=0.1,
                         help='percentage of test samples')
+    parser.add_argument('--num_gene', nargs= '?', default = 1789,
+                        help= 'number of genes related to disease and miRNA')
     parser.add_argument('--dev_percentage', nargs='?', default=0.1,
                         help='percentage of validation samples')
     parser.add_argument('--L2_norm', nargs='?', default=0.002,
@@ -108,7 +115,7 @@ def get_data(args):
     y_train, y_dev, test_label = input_label[:dev_sample_index], input_label[dev_sample_index:test_sample_index], \
                                  input_label[test_sample_index:]
 
-    return x_train, x_dev, test_data, y_train, y_dev, test_label
+    return test_data,test_label
 
 
 def deepnn(x, keep_prob, args):
@@ -136,7 +143,7 @@ def deepnn(x, keep_prob, args):
 
 def main(args):
     with tf.device('/cpu:0'):
-        x_train, x_dev, test_data, y_train, y_dev, test_label = get_data(args)
+        test_data = dh.get_samples(args.num_gene,args)
         with tf.name_scope('input'):
             input_data = tf.placeholder(tf.float32, [None, 2048],name='input_data')
             input_label = tf.placeholder(tf.float32, [None, 2],name='input_label')
@@ -156,39 +163,18 @@ def main(args):
             correct_predictions = tf.equal(predictions, tf.argmax(input_label, 1))
             correct_predictions = tf.cast(correct_predictions, tf.float32)
             accuracy = tf.reduce_mean(correct_predictions,name='accuracy')
-        batch_size = args.batch_size
-        num_epochs = args.training_epochs
-        display_step = args.display_step
-        k_p = args.keep_prob
 
+        saver = tf.train.Saver(tf.global_variables())
         with tf.Session() as sess:
+            ckpt = tf.train.get_checkpoint_state('./model')
+            if ckpt and tf.train.checkpoint_exists(ckpt.model_checkpoint_path):
+                saver.restore(sess, ckpt.model_checkpoint_path)
+            else:
+                print("111111")
                 sess.run(tf.global_variables_initializer())
-                batches = dh.batch_iter(list(zip(x_train, y_train)), batch_size, num_epochs)
 
-                for i, batch in enumerate(batches):
-                    x_batch, y_batch = zip(*batch)
-                    train_step.run(feed_dict={input_data: x_batch, input_label:y_batch, keep_prob :k_p})
-                    if i % display_step == 0:
-                        loss = sess.run(los, feed_dict={input_data: x_train, input_label: y_train, keep_prob :1.0})
-                        loss1 = sess.run(los, feed_dict={input_data: x_dev, input_label: y_dev, keep_prob :1.0})
+            y_predict = sess.run(y_res, feed_dict={input_data: test_data, keep_prob :1.0})[:, 1]
 
-                y_predict = sess.run(y_res, feed_dict={input_data: test_data, input_label: test_label, keep_prob :1.0})[:, 1]
-                false_positive_rate1, true_positive_rate1, thresholds1 = roc_curve(np.array(test_label)[:,1], y_predict)
-                roc_auc1 = auc(false_positive_rate1, true_positive_rate1)
-                print('auroc',roc_auc1)
-
-                average_precision = average_precision_score(np.array(test_label)[:, 1], y_predict)
-                print('Average precision-recall score: {0:0.2f}'.format(average_precision))
-
-                y_predict[y_predict >= 0.5] = 1
-                y_predict[y_predict < 0.5] = 0
-                p=metrics.precision_score(np.array(test_label)[:,1], y_predict)
-                print("precision",p)
-
-                r=metrics.recall_score(np.array(test_label)[:,1], y_predict)
-                print("recall",r)
-
-                print("f1-score", metrics.f1_score(np.array(test_label)[:, 1], y_predict))
 
 if __name__ == '__main__':
     args = parse_args()

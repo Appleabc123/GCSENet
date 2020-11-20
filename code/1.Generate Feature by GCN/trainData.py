@@ -11,7 +11,7 @@ class Dataset(object):
         #         self.data_set['gd']['train'], None,
         #         self.data_set['gd_p'], self.data_set['gd_true'])
 
-        return (self.data_set['mm'], self.data_set['mm'],
+        return (self.data_set['mm'], self.data_set['gg'],
                 self.data_set['gm']['train'], None,
                 self.data_set['gm_p'], self.data_set['gm_true'])
 

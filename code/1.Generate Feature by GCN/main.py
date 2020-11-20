@@ -6,10 +6,10 @@ from trainData import Dataset
 
 class Config(object):
     def __init__(self):
-        self.data_path = '.../data_path'
-        self.validation = 5
-        self.save_path = '.../save_path'
-        self.epoch = 200
+        self.data_path = 'C:/Users/LG/Desktop/GCS/data/Generate feature/miRNA-gene'
+        self.validation = 1
+        self.save_path = 'C:/Users/LG/Desktop/GCS/data/Generate feature/miRNA-gene'
+        self.epoch = 50
         self.alpha = 0.2
 
 
@@ -27,8 +27,8 @@ class Sizes(object):
     def __init__(self, dataset):
 
         self.g = dataset['gg']['data'].size(0)
-        # self.d = dataset['mm']['data'].size(0)
-        self.d = dataset['dd']['data'].size(0)
+        self.d = dataset['mm']['data'].size(0)
+        # self.d = dataset['dd']['data'].size(0)
         self.fg = 128
         self.fd = 128
         self.k = 32
