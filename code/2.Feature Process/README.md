@@ -11,7 +11,7 @@ You can check out the other options available to use with:
 	‘python process_feature.py --help’
 
 ## Input
-The input files conclude:
+The input files include:
 
 	disease-gene relationship file(.csv file)
 	miRNA-gene relationship file(.csv file)
@@ -19,7 +19,7 @@ The input files conclude:
 	negative samples(.txt file)
 
 ## Output
-The output files conclude:
+The output files include:
 
 	disease-miRNA representations(.csv file)
 	label for samples(.csv file)
