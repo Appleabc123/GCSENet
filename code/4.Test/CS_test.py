@@ -21,10 +21,10 @@ def parse_args():
     ## the input file
     ##disease-gene relationships and miRNA-gene relatiohships
 
-    parser.add_argument('--input_disease_gene', nargs='?', default='..\..\data\process_feature\output_file\disease_gene.csv',
-                        help='Input disease_gene_relationship file')
-    parser.add_argument('--input_dmRNA_gene', nargs='?', default='..\..\data\process_feature\output_file\miRNA_gene.csv',
-                        help='Input miRNA_gene_relationship file')
+    # parser.add_argument('--input_disease_gene', nargs='?', default='..\..\data\process_feature\output_file\disease_gene.csv',
+    #                     help='Input disease_gene_relationship file')
+    # parser.add_argument('--input_dmRNA_gene', nargs='?', default='..\..\data\process_feature\output_file\miRNA_gene.csv',
+    #                     help='Input miRNA_gene_relationship file')
     parser.add_argument('--file', nargs='?', default='..\..\data\Test\\test.txt',
                         help='Input disease_gene_relationship file')
     parser.add_argument('--input_label',nargs = '?',default='..\..\data\CNN_SENet\label.csv',
