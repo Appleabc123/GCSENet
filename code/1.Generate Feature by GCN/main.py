@@ -6,9 +6,9 @@ from trainData import Dataset
 
 class Config(object):
     def __init__(self):
-        self.data_path = 'C:/Users/LG/Desktop/GCS/data/Generate feature/miRNA-gene'
+        self.data_path = 'C:/.../data/Generate feature/miRNA-gene'
         self.validation = 1
-        self.save_path = 'C:/Users/LG/Desktop/GCS/data/Generate feature/miRNA-gene'
+        self.save_path = 'C:/.../data/Generate feature/miRNA-gene'
         self.epoch = 50
         self.alpha = 0.2
 
