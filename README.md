@@ -32,6 +32,7 @@ Step1. Get the feature vector (disease-gene, miRNA-gene)
     Run main.py to obtain disease-gene vector
     The result is saved in 
          ‘../data/process_feature’ folder, generating the ‘disease-gene.csv’ file 
+
     Similarly,
     Set the data_path in main.py containing original data (m-m.csv, g-g.csv, m-g.csv,
     miRNA_name.csv, gene_name.csv)
