@@ -11,9 +11,9 @@ g-g.csv : gene-gene similarity matrix
 
 g-d.csv : gene-disease association matrix
 
-disease name.csv : list of disease name
+disease_name.csv : list of disease name
 
-gene name.csv : list of gene name
+gene_name.csv : list of gene name
 
 
 
@@ -32,6 +32,6 @@ g-g.csv : gene-gene similarity matrix
 
 g-m.csv : gene-miRNA association matrix
 
-miRNA name.csv : list of miRNA name
+miRNA_name.csv : list of miRNA name
 
-gene name.csv : list of gene name
+gene_name.csv : list of gene name
