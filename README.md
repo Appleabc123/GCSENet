@@ -36,12 +36,18 @@ Step1. Get the feature vector (disease-gene, miRNA-gene)
     Run main.py to obtain miRNA-gene vector
     The result is saved in
         ‘../data/process_feature’ folder, generating the ‘miRNA-gene.csv’ file 
+        
+        
 Step2. Get the weighted feature (disease-miRNA) and label
     Run process_feature.py to obtain disease-miRNA vector
     The result is saved in
  	    ‘../data/CNN_SENet’ folder, generating two files with ‘disease-miRNA.csv’ and ‘label.csv’ 
+        
+        
 Step3. Train the network
     Run CS_train.py to train the model
+    
+    
 Step4. Test the benchmark set to get the AUROC, AUPR, Precision, Recall, F1-score
     Run CS_test.py to test the model
 
