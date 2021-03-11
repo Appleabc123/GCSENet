@@ -22,7 +22,7 @@ GCSENet was implemented with Python 3.6.4, with following packages installed:
 
 In addition,CUDA 8.0 and cuDNN 6.0 have been used.
 
-# Example
+# How to use
 
 Step1. Get the feature vector (disease-gene, miRNA-gene)
 
