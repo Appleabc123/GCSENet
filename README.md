@@ -25,30 +25,37 @@ In addition,CUDA 8.0 and cuDNN 6.0 have been used.
 # Example
 
 Step1. Get the feature vector (disease-gene, miRNA-gene)
+
     Set the data_path in main.py containing original data (d-d.csv, g-g.csv, d-g.csv,
     disease_name.csv, gene_name.csv)
+    
     Run main.py to obtain disease-gene vector
     The result is saved in 
          ‘../data/process_feature’ folder, generating the ‘disease-gene.csv’ file 
     Similarly,
     Set the data_path in main.py containing original data (m-m.csv, g-g.csv, m-g.csv,
     miRNA_name.csv, gene_name.csv)
+    
     Run main.py to obtain miRNA-gene vector
     The result is saved in
         ‘../data/process_feature’ folder, generating the ‘miRNA-gene.csv’ file 
         
         
 Step2. Get the weighted feature (disease-miRNA) and label
+
+
     Run process_feature.py to obtain disease-miRNA vector
     The result is saved in
  	    ‘../data/CNN_SENet’ folder, generating two files with ‘disease-miRNA.csv’ and ‘label.csv’ 
         
         
 Step3. Train the network
+
     Run CS_train.py to train the model
     
     
 Step4. Test the benchmark set to get the AUROC, AUPR, Precision, Recall, F1-score
+
     Run CS_test.py to test the model
 
 
