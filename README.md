@@ -8,6 +8,7 @@ it contains: "code" and "data"
     In the ‘data’ folder, it contains ‘generate feature’, ‘process feature’, ‘CNN_SENet’, ‘Test’ which mean the place to save the raw data, the place to save the feature components (miRNA-gene, disease-gene), the place to save the feature of miRNA-disease, the place to save the test dataset, respectively.
 
 
+
 #Dependencies
 
     GCSENet was implemented with python 3.6.4. To run GCSENet, you need these packages:
@@ -19,6 +20,8 @@ it contains: "code" and "data"
     Sklearn (0.20.3),       (https://pypi.org/project/sklearn/).
     Scipy (1.5.2),          (https://pypi.org/project/scipy/).
     In addition,CUDA 8.0 and cuDNN 6.0 have been used.
+
+
 
 #How to reproduce our results:
 
@@ -45,6 +48,8 @@ Step3. Train the network
 Step4. Test the benchmark2019 set to get the AUROC, AUPR, Precision, Recall, F1-score
 
        Run CS_test.py to test the model.
+
+
 
 #How to use the framework on your interested datasets (disease, gene, miRNA) as training and test datasets?
 
