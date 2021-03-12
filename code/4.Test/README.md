@@ -11,7 +11,7 @@ You can check out the other options available to use with:
 	‘python CS_test.py --help’.
 
 ## Input
-The input files conclude:
+The input files include:
 
 	disease-miRNAs and labels for test.
 
