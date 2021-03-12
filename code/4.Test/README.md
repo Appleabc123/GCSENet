@@ -1,4 +1,4 @@
-﻿# CNN_SENet
+﻿# Test
 
 ## Example
 To run CNN_SENet on your data, execute the following command from the project home directory:
