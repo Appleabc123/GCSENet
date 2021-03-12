@@ -13,7 +13,7 @@ You can check out the other options available to use with:
 ## Input
 The input files conclude:
 
-	disease-miRNA and label for test
+	disease-miRNAs and labels for test
 
 ## Output
 
