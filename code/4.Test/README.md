@@ -17,7 +17,9 @@ The input files include:
 
 ## Output
 
-The outputs are the ROC and accuracy of the test data based on GCSENet.
+The AUROC, AUPR, Precision, Recall, F1-score of the test data based on GCSENet.
+
+
 
 
 
