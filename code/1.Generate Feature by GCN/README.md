@@ -5,15 +5,15 @@ Run main.py of disease-gene, then you will get the relationship between diseases
 
 Data description
 
-d-d.csv : disease-disease similarity matrix
+d-d.csv : disease-disease similarity matrix.
 
-g-g.csv : gene-gene similarity matrix
+g-g.csv : gene-gene similarity matrix.
 
-g-d.csv : gene-disease association matrix
+g-d.csv : gene-disease association matrix.
 
-disease_name.csv : list of disease name
+disease_name.csv : list of disease name.
 
-gene_name.csv : list of gene name
+gene_name.csv : list of gene name.
 
 
 
@@ -26,12 +26,12 @@ Run main.py of miRNA-gene, then you will get the relationship between miRNAs and
 
 Data description
 
-m-m.csv : miRNA-miRNA similarity matrix
+m-m.csv : miRNA-miRNA similarity matrix.
 
-g-g.csv : gene-gene similarity matrix
+g-g.csv : gene-gene similarity matrix.
 
-g-m.csv : gene-miRNA association matrix
+g-m.csv : gene-miRNA association matrix.
 
-miRNA_name.csv : list of miRNA name
+miRNA_name.csv : list of miRNA name.
 
-gene_name.csv : list of gene name
+gene_name.csv : list of gene name.
