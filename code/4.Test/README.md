@@ -13,10 +13,13 @@ You can check out the other options available to use with:
 ## Input
 The input files conclude:
 
-	test.txt          
+	disease-miRNA test representations(.csv file)
+	label for test samples(.csv file)
 
 ## Output
-The output are the probability score
+
+The outputs are the ROC and accuracy of the test data based on GCSENet
+
 
 
 
