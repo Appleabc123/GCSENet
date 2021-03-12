@@ -26,10 +26,15 @@ In addition,CUDA 8.0 and cuDNN 6.0 have been used.
 Download the code package from https://github.com/Appleabc123/GCSENet.
 
 Step1. Get the feature vector (disease-gene)
+
        Set the data_path in main.py, containing original data (d-d.csv, g-g.csv, d-g.csv,disease_name.csv, gene_name.csv)
+       
        Run main.py to obtain the disease-gene vector. The result is saved in‘../data/process_feature’ folder, generating the ‘disease-gene.csv’ file
+       
        Get the feature vector (miRNA-gene)
+       
        Set the data_path in main.py, containing original data (m-m.csv, g-g.csv, m-g.csv, miRNA_name.csv, gene_name.csv)
+       
        Run main.py to obtain the miRNA-gene vector. The result is saved in‘../data/process_feature’ folder, generating the ‘miRNA-gene.csv’ file
 
 Step2. Get the weighted feature (disease-miRNA) and label
