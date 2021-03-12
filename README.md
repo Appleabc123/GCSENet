@@ -11,8 +11,7 @@ The user can apply the whole framework to their interested dataset or only use p
 
 #Dependencies
 
-GCSENet was implemented with python 3.6.4. To run GCSENet, you need these packages:
-
+    GCSENet was implemented with python 3.6.4. To run GCSENet, you need these packages:
     Matplotlib (3.1.1),     (https://pypi.org/project/matplotlib/)
     Networkx (2.5),       (https://pypi.org/project/networkx/)
     Tensorflow-gpu (1.4.0), (https://pypi.tuna.tsinghua.edu.cn/simple/tensorflow-gpu/)
@@ -20,11 +19,11 @@ GCSENet was implemented with python 3.6.4. To run GCSENet, you need these packag
     Pandas (0.25.3),       (https://pypi.org/project/pandas/)
     Sklearn (0.20.3),       (https://pypi.org/project/sklearn/)
     Scipy (1.5.2),          (https://pypi.org/project/scipy/)
-
-In addition,CUDA 8.0 and cuDNN 6.0 have been used.
+    In addition,CUDA 8.0 and cuDNN 6.0 have been used.
 
 #How to reproduce our results:
-Download the code package from https://github.com/Appleabc123/GCSENet.
+
+       Download the code package from https://github.com/Appleabc123/GCSENet.
 
 Step1. Get the feature vector (disease-gene, miRNA-gene)
 
