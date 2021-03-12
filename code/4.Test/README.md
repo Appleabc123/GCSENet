@@ -13,8 +13,7 @@ You can check out the other options available to use with:
 ## Input
 The input files conclude:
 
-	disease-miRNA test representations(.csv file)
-	label for test samples(.csv file)
+	disease-miRNA and label for test
 
 ## Output
 
