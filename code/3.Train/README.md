@@ -16,8 +16,6 @@ The input files include:
 	disease-miRNA representations(.csv file)
 	label for samples(.csv file)
 
-## Output
-The outputs are the ROC and accuracy of the test data based on GCSENet
 
 
 
