@@ -58,7 +58,7 @@ Step 1. Generate the feature vector of miRNA-gene, disease-gene
     (1). Put the interested data (d-d.csv, g-d.csv, g-g.csv, disease_name.csv, gene_name.csv) in the ‘../data/Generate feature/disease-gene’ folder, the interested data (g-g.csv, g-m.csv, m-m.csv, gene_name.csv, miRNA_name.csv) in the ‘../data/Generate feature/miRNA-gene’ folder, respectively.
     (2). Set some parameters in main.py:
          data_path = ‘../data/Generate feature/disease-gene’ #setting the data directory as the directory where you save the raw data (disease-gene, miRNA-gene).
-         save_path = ‘../data/process_feature’  #the directory is the place to save the feature vector of disease-gene, miRNA-gene which will used in the following step 2.
+         save_path = ‘../data/process_feature’  #the directory is the place to save the feature vectors of disease-gene and miRNA-gene which will used in the following step 2.
     (3). Run ‘main.py’ to get the feature vector of disease-gene and miRNA-gene which will be saved in the given path.
 
 Step 2. Process the feature vector to get the feature of miRNA-disease and label
