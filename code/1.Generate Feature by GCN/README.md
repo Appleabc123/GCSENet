@@ -1,6 +1,6 @@
 #######For disease and gene
 
-Run main.py of disease-gene,then you get the relationship between diseases and genes.
+Run main.py of disease-gene, then you will get the relationship between diseases and genes.
 
 
 Data description
@@ -21,7 +21,7 @@ gene_name.csv : list of gene name
 
 #######For miRNA and gene
 
-Run main.py of miRNA-gene, then you get the relationship between miRNAs and genes.
+Run main.py of miRNA-gene, then you will get the relationship between miRNAs and genes.
 
 
 Data description
