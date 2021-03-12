@@ -6,7 +6,7 @@ To run CNN_SENet on your data, execute the following command from the project ho
 	‘python CS_train.py'.
 
 ## Options
-You can check out the other options available to use with:
+You can check out other options available to use with:
 
 	‘python CS_train.py --help’.
 
