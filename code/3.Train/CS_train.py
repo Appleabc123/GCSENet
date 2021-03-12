@@ -176,6 +176,7 @@ def main(args):
             for i, batch in enumerate(batches):
                 x_batch, y_batch = zip(*batch)
                 train_step.run(feed_dict={input_data: x_batch, input_label:y_batch, keep_prob :k_p})
+                print("Epoch:", "%4d" % ( i+ 1), "cost:", "{:.9f}".format(loss))
                 if i % display_step == 0:
                     loss = sess.run(los, feed_dict={input_data: x_train, input_label: y_train, keep_prob :1.0})
                     loss1 = sess.run(los, feed_dict={input_data: x_dev, input_label: y_dev, keep_prob :1.0})
