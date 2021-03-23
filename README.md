@@ -4,8 +4,8 @@
 
 it contains: "code" and "data"
 
-    In the ‘code’ folder, it includes ‘1.Generate Feature by GCN’, ‘2.Feature Process’, ‘3.Train’, ‘4.Test’, which mean the code to generate feature, the code to process feature, the code to train the model, the code to test the model, respectively.
-    In the ‘data’ folder, it contains ‘generate feature’, ‘process feature’, ‘CNN_SENet’, ‘Test’ which mean the place to save the raw data, the place to save the feature components (miRNA-gene, disease-gene), the place to save the feature of miRNA-disease, the place to save the test dataset, respectively.
+    In the ‘code’ folder, it includes ‘1.Generate Feature by GCN’, ‘2.Feature Process’, ‘3.Train’,,, ‘4.Test’, which means the code to generate feature, the code to process feature, the code to train the model and the code to test the model, respectively.
+    In the ‘data’ folder, it contains ‘generate feature’, ‘process feature’, ‘CNN_SENet’, ‘Test’, which means the place to save the raw data, the place to save the feature components (miRNA-gene, disease-gene), the place to save the feature of miRNA-disease and the place to save the test dataset, respectively.
 
 
 
@@ -51,7 +51,7 @@ Step4. Test the benchmark2019 set to get the AUROC, AUPR, Precision, Recall, F1-
 
 
 
-#How to use the framework on your interested datasets (disease, gene, miRNA) as training and test datasets?
+#How to use the framework on your interested datasets (disease, gene, miRNA) as training or test datasets?
 
 Step 1. Generate the feature vector of miRNA-gene, disease-gene
 
